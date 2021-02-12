@@ -1,0 +1,43 @@
+@use 'variables' as V
+
+@mixin vendor-prefix($name, $value)
+  -webkit-#{$name}: $value
+     -moz-#{$name}: $value
+      -ms-#{$name}: $value
+       -o-#{$name}: $value
+          #{$name}: $value
+
+@mixin keyframe($animation-name)
+    @-webkit-keyframes #{$animation-name} 
+        @content
+    @-moz-keyframes #{$animation-name}
+        @content
+    @-ms-keyframes #{$animation-name}
+        @content
+    @-o-keyframes #{$animation-name}
+        @content 
+    @keyframes #{$animation-name}
+        @content
+
+@mixin keyframe-from-to($name, $from, $to)    
+    @include keyframe($name) 
+        0% 
+            @include vendor-prefix(transform, $from)
+        100%
+            @include vendor-prefix(transform, $to)   
+
+@mixin keyframe-from-mid-to($name,$from, $mid, $to)    
+    @include keyframe($name) 
+        0% 
+            @include vendor-prefix(transform, $from)
+        50% 
+            @include vendor-prefix(transform, $mid)
+        100%
+            @include vendor-prefix(transform, $to)            
+
+@mixin vivify-animate($name, $from:null, $mid:null, $to:null,$duration: V.$duration, $timing-function: V.$timing-function, $delay: V.$delay, $iteration-count: V.$iteration-count, $direction: V.$direction, $fill-mode: V.$fill-mode)
+    @if $mid and $from and $to
+        @include keyframe-from-mid-to($name, $from, $mid, $to)
+    @else if $from and $to
+        @include keyframe-from-to($name, $from, $to)
+    @include vendor-prefix(animation, $name $duration $timing-function $delay $iteration-count $direction $fill-mode)       

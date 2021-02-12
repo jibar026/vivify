@@ -1,0 +1,33 @@
+// @use '../utils/variables' as V
+@use '../utils/mixin' as M      
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+
+@include M.keyframe(tracking-in-expand)
+    0% 
+        letter-spacing: -0.2em
+        opacity: 0
+    40%
+        opacity: 0.6    
+    100%
+        opacity: 1    
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-contract-bck-top
+ * ----------------------------------------
+ */
+
+@include M.keyframe(tracking-in-contract-bck-top)
+    0% 
+        letter-spacing: 1em
+        @include M.vendor-prefix('transform',translateZ(260px) translateY(-60px))
+    40%
+        opacity: 0.6    
+    100%
+        @include M.vendor-prefix('transform',translateZ(0) translateY(0))
+        opacity: 1

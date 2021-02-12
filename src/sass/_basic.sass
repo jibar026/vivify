@@ -1,0 +1,66 @@
+// @use 'keyframes/keyframes' as keyframes
+@use 'utils/mixin' as M
+// @use 'utils/variables' as V
+
+/**
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */ 
+
+.v-scale-up-center
+    @include M.vivify-animate($name: scale-up-center, $from:scale(0.5), $to:scale(1))   
+
+/**
+ * ----------------------------------------
+ * animation flip-vertical-bck
+ * ----------------------------------------
+ */
+
+.v-flip-vertical-bck
+    @include M.vivify-animate($name: flip-vertical-bck, $from:translateZ(260px) rotateY(0), $to:translateZ(0) rotateY(-180deg))
+
+/**
+ * ----------------------------------------
+ * animation flip-horizontal-top
+ * ----------------------------------------
+ */
+
+.v-flip-horizontal-top
+    @include M.vivify-animate($name: flip-horizontal-top, $from:rotateX(0), $to:rotateX(180deg))
+
+/**
+ * ----------------------------------------
+ * animation flip-vertical-fwd
+ * ----------------------------------------
+ */            
+
+.v-flip-vertical-fwd
+    @include M.vivify-animate($name: flip-vertical-fwd, $from:translateZ(-260px) rotateY(0), $to:translateZ(0) rotateY(180deg))          
+
+/**
+ * ----------------------------------------
+ * animation flip-diagonal-1-tr
+ * ----------------------------------------
+ */
+
+.v-flip-diagonal-1-tr
+    @include M.vivify-animate($name: flip-diagonal-1-tr, $from:rotate3d(1, 1, 0, 0deg), $to:rotate3d(1, 1, 0, 180deg))               
+
+/**
+ * ----------------------------------------
+ * animation flip-horizontal-bck
+ * ----------------------------------------
+ */
+
+.v-flip-horizontal-bck
+    @include M.vivify-animate($name: flip-horizontal-bck, $from:translateZ(260px) rotateX(0), $to:translateZ(0px) rotateX(180deg))                     
+
+/**
+ * ----------------------------------------
+ * animation flip-horizontal-fwd
+ * ----------------------------------------
+ */    
+
+.v-flip-horizontal-fwd
+    @include M.vivify-animate($name: flip-horizontal-fwd, $from:translateZ(-260px) rotateX(0), $to:translateZ(0) rotateX(-180deg))    

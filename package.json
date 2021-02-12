@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Vivify is a collection of pre-made CSS animations.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "sass src/sass/_index.sass src/dist/index.css",
+    "css-watch": "npm run css-build -- --watch --style=compressed",
+    "start": "npm run css-watch"
   },
   "files": [
     "css",
-    "fonts",
+    "sass",
     "LICENSE"
   ],
   "repository": {
@@ -16,6 +19,7 @@
   },
   "keywords": [
     "CSS",
+    "SASS",
     "Animation",
     "Animations",
     "No",
