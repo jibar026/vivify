@@ -27,7 +27,7 @@
  */
 
 .v-flip-horizontal-top
-    @include M.vivify-animate($name: flip-horizontal-top, $from:rotateX(0), $to:rotateX(180deg))
+    @include M.vivify-animate($name: flip-horizontal-top, $from:rotateX(180deg), $to:rotateX(0))
 
 /**
  * ----------------------------------------
@@ -45,7 +45,7 @@
  */
 
 .v-flip-diagonal-1-tr
-    @include M.vivify-animate($name: flip-diagonal-1-tr, $from:rotate3d(1, 1, 0, 0deg), $to:rotate3d(1, 1, 0, 180deg))               
+    @include M.vivify-animate($name: flip-diagonal-1-tr, $from:rotate3d(1, 1, 0, 180deg), $to:rotate3d(1, 1, 0, 0deg))               
 
 /**
  * ----------------------------------------
@@ -54,7 +54,7 @@
  */
 
 .v-flip-horizontal-bck
-    @include M.vivify-animate($name: flip-horizontal-bck, $from:translateZ(260px) rotateX(0), $to:translateZ(0px) rotateX(180deg))                     
+    @include M.vivify-animate($name: flip-horizontal-bck, $from:translateZ(260px) rotateX(180deg), $to:translateZ(0px) rotateX(0))                     
 
 /**
  * ----------------------------------------
@@ -63,4 +63,4 @@
  */    
 
 .v-flip-horizontal-fwd
-    @include M.vivify-animate($name: flip-horizontal-fwd, $from:translateZ(-260px) rotateX(0), $to:translateZ(0) rotateX(-180deg))    
+    @include M.vivify-animate($name: flip-horizontal-fwd, $from:translateZ(-260px) rotateX(-180deg), $to:translateZ(0) rotateX(0))    
