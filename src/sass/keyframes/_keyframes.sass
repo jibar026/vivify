@@ -1,5 +1,6 @@
 // @use '../utils/variables' as V
-@use '../utils/mixin' as M      
+@use '../utils/mixin' as M 
+@use "sass:string"     
 
 /**
  * ----------------------------------------
@@ -15,6 +16,50 @@
         opacity: 0.6    
     100%
         opacity: 1    
+/**
+ * ----------------------------------------
+ * animation tracking-out-expand
+ * ----------------------------------------
+ */
+
+@include M.keyframe(tracking-out-expand)
+    0% 
+        letter-spacing: -0.2em
+        opacity: 1
+    40%
+        opacity: 0.6    
+    100%
+        opacity: 0   
+/**
+ * ----------------------------------------
+ * animation tracking-in-contract
+ * ----------------------------------------
+ */
+
+@include M.keyframe(tracking-in-contract)
+    0% 
+        letter-spacing: 1em
+        opacity: 0
+    40%
+        opacity: 0.6    
+    100%
+        letter-spacing: normal
+        opacity: 1    
+/**
+ * ----------------------------------------
+ * animation tracking-out-contract
+ * ----------------------------------------
+ */
+
+@include M.keyframe(tracking-out-contract)
+    0% 
+        letter-spacing: 1em
+        opacity: 1
+    40%
+        opacity: 0.6    
+    100%
+        letter-spacing: normal
+        opacity: 0   
 
 /**
  * ----------------------------------------
@@ -31,3 +76,69 @@
     100%
         @include M.vendor-prefix('transform',translateZ(0) translateY(0))
         opacity: 1
+/**
+ * ----------------------------------------
+ * animation tracking-in-contract-bck-btn
+ * ----------------------------------------
+ */
+
+@include M.keyframe(tracking-in-contract-bck-btn)
+    0% 
+        letter-spacing: 1em
+        @include M.vendor-prefix('transform',translateZ(260px) translateY(60px))
+    40%
+        opacity: 0.6    
+    100%
+        @include M.vendor-prefix('transform',translateZ(0) translateY(0))
+        opacity: 1
+
+/**
+ * ----------------------------------------
+ * animation swing-top
+ * ----------------------------------------
+ */    
+
+@include M.keyframe(swing-top)
+    0% 
+        @include M.vendor-prefix('transform',rotateX(180deg))  
+        @include M.vendor-prefix('transform-origin',top)  
+    100%
+        @include M.vendor-prefix('transform',rotateX(0))  
+        @include M.vendor-prefix('transform-origin',top) 
+/**
+ * ----------------------------------------
+ * animation swing-btn
+ * ----------------------------------------
+ */    
+
+@include M.keyframe(swing-btn)
+    0% 
+        @include M.vendor-prefix('transform',rotateX(-180deg))  
+        @include M.vendor-prefix('transform-origin',bottom)  
+    100%
+        @include M.vendor-prefix('transform',rotateX(0))  
+        @include M.vendor-prefix('transform-origin',bottom) 
+
+/**
+ * ----------------------------------------
+ * animation shadow-drop
+ * ----------------------------------------
+ */
+
+@include M.keyframe(shadow-drop)
+    0% 
+        @include M.vendor-prefix('box-shadow',0 0 0 0 rgba(0, 0, 0, 0))    
+    100%
+        @include M.vendor-prefix('box-shadow',0 0 20px 0px rgba(0, 0, 0, 0.35))     
+
+/**
+ * ----------------------------------------
+ * animation shadow-inset
+ * ----------------------------------------
+ */
+
+@include M.keyframe(shadow-inset)
+    0% 
+        @include M.vendor-prefix('box-shadow',inset 0 0 0 0 rgba(0, 0, 0, 0))        
+    100%
+        @include M.vendor-prefix('box-shadow',inset 0 0 14px 0px rgba(0, 0, 0, 0.5))        

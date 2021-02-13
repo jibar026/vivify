@@ -13,6 +13,23 @@
 
 /**
  * ----------------------------------------
+ * animation scale-up-ver-center
+ * ----------------------------------------
+ */
+
+.v-scale-up-ver-center
+    @include M.vivify-animate($name: scale-up-ver-center, $from:scaleY(0.4), $to:scaleY(1))            
+/**
+ * ----------------------------------------
+ * animation scale-up-hor-center
+ * ----------------------------------------
+ */
+
+.v-scale-up-hor-center
+    @include M.vivify-animate($name: scale-up-hor-center, $from:scaleX(0.4), $to:scaleX(1))            
+
+/**
+ * ----------------------------------------
  * animation flip-vertical-bck
  * ----------------------------------------
  */
@@ -64,3 +81,108 @@
 
 .v-flip-horizontal-fwd
     @include M.vivify-animate($name: flip-horizontal-fwd, $from:translateZ(-260px) rotateX(-180deg), $to:translateZ(0) rotateX(0))    
+
+
+/**
+ * ----------------------------------------
+ * animation flip-horizontal-bottom
+ * ----------------------------------------
+ */    
+
+.v-flip-horizontal-bottom
+    @include M.vivify-animate($name: flip-horizontal-bottom, $from:rotateX(-180deg), $to:rotateX(0))             
+
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+
+.v-rotate-center
+    @include M.vivify-animate($name:rotate-center, $from:rotate(0), $to:rotate(360deg), $timing-function:ease-in-out)    
+
+/**
+ * ----------------------------------------
+ * animation rotate-vert-center
+ * ----------------------------------------
+ */
+
+.v-rotate-vert-center
+    @include M.vivify-animate($name:rotate-vert-center, $from:rotateY(0), $to:rotateY(360deg))    
+
+/**
+ * ----------------------------------------
+ * animation rotate-diagonal
+ * ----------------------------------------
+ */                  
+
+.v-rotate-diagonal
+    @include M.vivify-animate($name:rotate-diagonal, $from:rotate3d(-1, 1, 0, 0deg), $mid:rotate3d(-1, 1, 0, 180deg), $to:rotate3d(-1, 1, 0, 360deg))            
+
+/**
+ * ----------------------------------------
+ * animation swing-top
+ * ----------------------------------------
+ */
+
+.v-swing-top
+    @include M.vivify-animate($name:swing-top)             
+/**
+ * ----------------------------------------
+ * animation swing-btn
+ * ----------------------------------------
+ */
+
+.v-swing-btn
+    @include M.vivify-animate($name:swing-btn)             
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+
+.v-slide-top
+    @include M.vivify-animate($name:slide-top,$from:translateY(-100px),$to:translateY(0))  
+/**
+ * ----------------------------------------
+ * animation slide-btn
+ * ----------------------------------------
+ */
+
+.v-slide-btn
+    @include M.vivify-animate($name:slide-btn,$from:translateY(100px),$to:translateY(0))  
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
+
+.v-slide-left
+    @include M.vivify-animate($name:slide-left,$from:translateX(-100px),$to:translateX(0))  
+/**
+ * ----------------------------------------
+ * animation slide-right
+ * ----------------------------------------
+ */
+
+.v-slide-right
+    @include M.vivify-animate($name:slide-right,$from:translateX(100px),$to:translateX(0))  
+
+/**
+ * ----------------------------------------
+ * animation shadow-drop
+ * ----------------------------------------
+ */                       
+
+.v-shadow-drop
+    @include M.vivify-animate($name:shadow-drop)
+
+/**
+ * ----------------------------------------
+ * animation shadow-inset
+ * ----------------------------------------
+ */                       
+
+.v-shadow-inset
+    @include M.vivify-animate($name:shadow-inset)    
