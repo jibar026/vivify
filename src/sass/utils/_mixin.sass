@@ -1,11 +1,12 @@
 @use 'variables' as V
 
 @mixin vendor-prefix($name, $value)
-  -webkit-#{$name}: $value
-     -moz-#{$name}: $value
-      -ms-#{$name}: $value
-       -o-#{$name}: $value
-          #{$name}: $value
+    -webkit-#{$name}: $value
+    @if $name != 'animation'
+        -moz-#{$name}: $value
+        -ms-#{$name}: $value
+        -o-#{$name}: $value
+    #{$name}: $value
 
 @mixin keyframe($animation-name)
     @-webkit-keyframes #{$animation-name} 

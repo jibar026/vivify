@@ -1,7 +1,7 @@
 {
-  "name": "vivify",
-  "version": "1.0.0",
-  "description": "Vivify is a collection of pre-made CSS animations.",
+  "name": "vivify.sass",
+  "version": "1.0.1",
+  "description": "Vivify is a collection of pre-made SASS animations.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "css-build": "sass src/sass/_index.sass src/dist/index.css",
@@ -9,8 +9,7 @@
     "start": "npm run css-watch"
   },
   "files": [
-    "css",
-    "sass",
+    "src/*",
     "LICENSE"
   ],
   "repository": {
@@ -31,5 +30,5 @@
   "bugs": {
     "url": "https://github.com/jibar026/vivify/issues"
   },
-  "homepage": "https://github.com/jibar026/vivify#readme"
+  "homepage": "https://jibar026.github.io/vivify/"
 }
