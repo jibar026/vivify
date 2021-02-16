@@ -12,8 +12,8 @@ npm i vivify.sass
 
 ## Usage
 Sass
-```sass
-import vivify from 'vivify.sass';
+```scss
+@import "vivify.sass/src/dist/index.css"
 ```
 HTML5
 ```html
@@ -21,7 +21,7 @@ HTML5
 ```
 ## Demos
 
-See all animations [demos](https://jibar026.github.io/vivify/).
+See all animations [demos](https://jibar026.github.io/vivify/) in here.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
