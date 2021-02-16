@@ -17,7 +17,7 @@ Sass
 ```
 HTML5
 ```html
-<link rel="stylesheet" href="path/to/module/src/dist/index.css">
+<link rel="stylesheet" href="path/to/module/src/dist/index.css">;
 ```
 
 ## Usage
