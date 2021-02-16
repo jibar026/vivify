@@ -10,7 +10,7 @@ Use the package manager [npm](https://www.npmjs.com/package/vivify.sass) to inst
 npm i vivify.sass
 ```
 
-## Usage
+## Quick Start
 Sass
 ```scss
 @import "vivify.sass/src/dist/index.css"
@@ -19,6 +19,14 @@ HTML5
 ```html
 <link rel="stylesheet" href="path/to/module/src/dist/index.css">
 ```
+
+## Usage
+
+HTML5
+```html
+<div class="v-animation-name"></div>
+```
+
 ## Demos
 
 See all animations [demos](https://jibar026.github.io/vivify/) in here.
